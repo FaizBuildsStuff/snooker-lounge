@@ -125,7 +125,7 @@ export default function Hero() {
 
         <div className="hero-reveal mb-24">
           <button className="group flex items-center overflow-hidden rounded-full bg-white border border-black/10 shadow-sm transition-all duration-300 hover:scale-[1.04] hover:shadow-md">
-            <span className="px-8 py-4 text-[13px] font-semibold tracking-[-0.01em] text-black uppercase">Reserve Your Spot</span>
+            <span className="px-8 py-4 text-[13px] font-semibold tracking-[-0.01em] text-black uppercase">Book Now</span>
             <div className="flex h-[54px] w-[54px] items-center justify-center bg-black transition-all duration-300 group-hover:bg-gray-900">
               <ArrowUpRight className="h-5 w-5 text-white stroke-[3px]" />
             </div>
