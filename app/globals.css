@@ -16,19 +16,19 @@
 }
 
 :root {
-  --background: #030303;
-  --foreground: #ffffff;
-  --primary: #a3e635; /* Matera Lime Green */
-  --secondary: #888888;
-  --border: rgba(255, 255, 255, 0.08);
+  --background: #FAFAFA;
+  --foreground: #0A0A0A;
+  --primary: #0A0A0A;
+  --secondary: #666666;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 .dark {
-  --background: #030303;
-  --foreground: #ffffff;
-  --primary: #a3e635;
-  --secondary: #888888;
-  --border: rgba(255, 255, 255, 0.08);
+  --background: #FAFAFA;
+  --foreground: #0A0A0A;
+  --primary: #0A0A0A;
+  --secondary: #666666;
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 @layer base {
@@ -48,7 +48,7 @@
     text-wrap: balance;
   }
   .luxury-border {
-    @apply border border-white/10;
+    @apply border border-black/10;
   }
   .luxury-button {
     @apply px-8 py-4 uppercase tracking-[0.2em] text-xs font-sans font-medium transition-all duration-700;
@@ -60,13 +60,13 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #FAFAFA;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c2a675;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 html.lenis, html.lenis body {

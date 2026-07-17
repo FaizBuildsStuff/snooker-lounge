@@ -1,7 +1,7 @@
 "use client";
 
 import { Gamepad2, Trophy, Coffee, Users, Target, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const features = [
   {
@@ -36,7 +36,7 @@ const features = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -45,7 +45,7 @@ const containerVariants = {
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 60 },
   visible: { 
     opacity: 1, 
@@ -59,22 +59,22 @@ const cardVariants = {
 
 export default function Features() {
   return (
-    <section className="py-24 md:py-32 px-4 md:px-8 lg:px-12 w-full relative border-t border-white/[0.02]">
+    <section className="py-24 md:py-32 px-4 md:px-8 lg:px-12 w-full relative border-t border-black/[0.04]">
       {/* Section-specific Background */}
       <div 
         className="absolute inset-0 pointer-events-none z-[-1]"
         style={{
-          background: 'radial-gradient(circle at 0% 20%, rgba(163, 230, 53, 0.05) 0%, transparent 50%), radial-gradient(circle at 100% 80%, rgba(163, 230, 53, 0.04) 0%, transparent 50%)'
+          background: 'radial-gradient(circle at 0% 20%, rgba(0, 0, 0, 0.03) 0%, transparent 50%), radial-gradient(circle at 100% 80%, rgba(0, 0, 0, 0.02) 0%, transparent 50%)'
         }}
       />
 
       <div className="max-w-[1500px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-12 relative z-10">
         <div>
-          <h2 className="text-[2.1rem] sm:text-[3.2rem] lg:text-[4.2rem] font-semibold leading-[0.95] tracking-[-0.05em] text-white">
+          <h2 className="text-[2.1rem] sm:text-[3.2rem] lg:text-[4.2rem] font-semibold leading-[0.95] tracking-[-0.05em] text-black">
             Designed for <br/>Excellence.
           </h2>
-          <p className="mt-4 max-w-xl text-[14px] sm:text-[15px] leading-[1.8] text-white/50">
+          <p className="mt-4 max-w-xl text-[14px] sm:text-[15px] leading-[1.8] text-black/60">
             Every aspect curated for an unmatched competitive experience.
           </p>
         </div>
@@ -91,19 +91,17 @@ export default function Features() {
           <motion.div
             key={index}
             variants={cardVariants}
-            className="feature-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-auto relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.03] backdrop-blur-2xl p-8 transition-all duration-500 hover:-translate-y-2 group"
+            className="feature-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-auto relative overflow-hidden rounded-[32px] border border-black/[0.08] bg-white/[0.6] backdrop-blur-2xl p-8 transition-all duration-500 hover:-translate-y-2 group shadow-sm"
           >
-            <div className="absolute inset-0 z-10 opacity-0 transition-all duration-700 group-hover:opacity-100" style={{ background: 'linear-gradient(180deg, rgba(163,230,53,0.14), transparent 35%)' }} />
+            <div className="absolute inset-0 z-10 opacity-0 transition-all duration-700 group-hover:opacity-100" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.03), transparent 35%)' }} />
             
             <div className="relative z-20 flex flex-col items-start h-full">
-              <div className="mb-8 w-14 h-14 flex items-center justify-center rounded-[20px] bg-black/30 border border-white/10 text-white group-hover:text-primary transition-colors duration-500">
+              <div className="mb-8 w-14 h-14 flex items-center justify-center rounded-[20px] bg-black/5 border border-black/10 text-black group-hover:bg-black group-hover:text-white transition-colors duration-500">
                 <feature.icon className="w-6 h-6 stroke-[1.5]" />
               </div>
-              <h4 className="text-[1.2rem] font-semibold tracking-[-0.05em] text-white mb-3">{feature.title}</h4>
-              <p className="text-[13px] text-white/50 leading-relaxed font-sans">{feature.description}</p>
+              <h4 className="text-[1.2rem] font-semibold tracking-[-0.05em] text-black mb-3">{feature.title}</h4>
+              <p className="text-[13px] text-black/60 leading-relaxed font-sans">{feature.description}</p>
             </div>
-            
-            <div className="absolute inset-0 rounded-[32px] border border-white/10 pointer-events-none" />
           </motion.div>
         ))}
       </motion.div>

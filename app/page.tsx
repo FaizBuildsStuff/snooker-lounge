@@ -21,7 +21,7 @@ export default function Home() {
       <Preloader />
       <CustomCursor />
       <Noise />
-      <main className="flex min-h-screen flex-col selection:bg-primary/30 selection:text-white">
+      <main className="flex min-h-screen flex-col selection:bg-black selection:text-white">
         <GridBackground />
         <Hero />
         <About />

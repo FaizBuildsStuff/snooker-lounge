@@ -71,14 +71,14 @@ export default function Preloader() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[#050505] text-white"
+      className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050505] text-white"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-[#050505] to-[#050505] opacity-50" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-[#050505] to-[#050505] opacity-50" />
       <div className="relative z-10 flex flex-col items-center gap-4">
-        <div ref={textRef} className="text-sm tracking-[0.4em] uppercase text-primary font-medium opacity-0">
+        <div ref={textRef} className="text-sm tracking-[0.4em] uppercase text-white/60 font-medium opacity-0">
           Initializing Experience
         </div>
-        <div ref={counterRef} className="text-8xl md:text-9xl font-light tracking-tighter">
+        <div ref={counterRef} className="text-8xl md:text-9xl font-light tracking-tighter text-white">
           0%
         </div>
       </div>
