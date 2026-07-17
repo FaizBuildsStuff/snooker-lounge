@@ -24,11 +24,11 @@
 }
 
 .dark {
-  --background: #FAFAFA;
-  --foreground: #0A0A0A;
-  --primary: #0A0A0A;
-  --secondary: #666666;
-  --border: rgba(0, 0, 0, 0.08);
+  --background: #030303;
+  --foreground: #ffffff;
+  --primary: #a3e635;
+  --secondary: #888888;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
 @layer base {
@@ -87,4 +87,36 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* 
+  Next-Level Theme View Transitions 
+  Used by ThemeToggle.tsx to create a circular expansion effect
+*/
+::view-transition-group(root) {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+::view-transition-new(root),
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+/* Light Mode is active, but we are animating TO dark mode */
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+.dark::view-transition-new(root) {
+  z-index: 2147483646;
+}
+
+/* Dark mode is active, but we are animating TO light mode */
+::view-transition-old(root) {
+  z-index: 2147483646;
+}
+::view-transition-new(root) {
+  z-index: 1;
 }
