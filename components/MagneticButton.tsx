@@ -28,6 +28,9 @@ export default function MagneticButton({
     });
 
     const handleMouseMove = (e: MouseEvent) => {
+      // Disable on touch devices
+      if (window.matchMedia("(hover: none)").matches) return;
+      
       const { clientX, clientY } = e;
       const { height, width, left, top } = button.getBoundingClientRect();
       const x = clientX - (left + width / 2);

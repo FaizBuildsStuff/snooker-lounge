@@ -10,6 +10,7 @@ export default function About() {
   const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
       const texts = gsap.utils.toArray(".about-reveal");
       
@@ -42,40 +43,54 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={containerRef} id="about" className="py-32 px-4 md:px-8 lg:px-16 max-w-[1400px] mx-auto w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <div className="about-image-container relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
-          <Image
-            src="/images/vip.jpg"
-            alt="About Lounge"
-            fill
-            className="about-image object-cover"
-          />
-          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
-        </div>
-        
-        <div ref={textRef} className="flex flex-col justify-center">
-          <h3 className="about-reveal text-primary tracking-[0.2em] uppercase text-sm mb-6">About The Club</h3>
-          <h2 className="about-reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-8 leading-[1.1] text-balance">
-            Where precision meets luxury.
-          </h2>
-          <div className="about-reveal flex flex-col gap-6 text-secondary text-lg leading-relaxed">
-            <p>
-              Located in the heart of Multan, our club redefines the standard for competitive gaming and professional snooker. We've crafted an environment where every detail speaks of exclusivity and premium quality.
-            </p>
-            <p>
-              From championship-grade tables to next-generation gaming setups, our lounge is designed for those who appreciate the finer things in life and accept nothing less than perfection.
-            </p>
+    <section ref={containerRef} id="about" className="py-24 md:py-32 px-4 md:px-8 lg:px-12 w-full relative">
+      {/* Section-specific Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-[-1]"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.04) 0%, transparent 60%)'
+        }}
+      />
+
+      <div className="max-w-[1500px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="about-image-container relative aspect-[4/5] w-full overflow-hidden rounded-[32px] border border-white/[0.08]">
+            <Image
+              src="/images/vip.jpg"
+              alt="About Lounge"
+              fill
+              className="about-image object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030303]/60 to-transparent mix-blend-overlay" />
           </div>
           
-          <div className="about-reveal mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-12">
-            <div>
-              <div className="text-4xl font-light text-white mb-2">01</div>
-              <div className="text-sm text-secondary uppercase tracking-wider">Premium Tables</div>
+          <div ref={textRef} className="flex flex-col justify-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 backdrop-blur-2xl self-start">
+              <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_20px_rgba(163,230,53,1)]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">ABOUT THE CLUB</span>
             </div>
-            <div>
-              <div className="text-4xl font-light text-white mb-2">02</div>
-              <div className="text-sm text-secondary uppercase tracking-wider">VIP Service</div>
+            
+            <h2 className="about-reveal text-[2.2rem] sm:text-[3.5rem] lg:text-[4.6rem] font-semibold tracking-[-0.05em] text-white mb-8 leading-[0.95]">
+              Where precision<br/>meets luxury.
+            </h2>
+            <div className="about-reveal flex flex-col gap-6 text-white/50 text-[14px] sm:text-[15px] leading-[1.8] max-w-xl">
+              <p>
+                Located in the heart of Multan, our club redefines the standard for competitive gaming and professional snooker. We've crafted an environment where every detail speaks of exclusivity and premium quality.
+              </p>
+              <p>
+                From championship-grade tables to next-generation gaming setups, our lounge is designed for those who appreciate the finer things in life and accept nothing less than perfection.
+              </p>
+            </div>
+            
+            <div className="about-reveal mt-12 grid grid-cols-2 gap-8 border-t border-white/[0.08] pt-12">
+              <div>
+                <div className="text-4xl font-semibold text-white mb-2 tracking-tighter">01</div>
+                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">Premium Tables</div>
+              </div>
+              <div>
+                <div className="text-4xl font-semibold text-white mb-2 tracking-tighter">02</div>
+                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">VIP Service</div>
+              </div>
             </div>
           </div>
         </div>

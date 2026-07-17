@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Gamepad2, Trophy, Coffee, Users, Target, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -38,57 +36,77 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.8, 
+      ease: "easeOut" 
+    } 
+  }
+};
+
 export default function Features() {
-  const containerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".feature-card", {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 70%",
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section ref={containerRef} className="py-32 px-4 md:px-8 lg:px-16 max-w-[1400px] mx-auto w-full relative">
-      <div className="text-center max-w-3xl mx-auto mb-20">
-        <h3 className="text-primary tracking-[0.2em] uppercase text-sm mb-6">Exceptional Facilities</h3>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1] mb-6">
-          Designed for Excellence
-        </h2>
-        <p className="text-secondary text-lg">
-          Every aspect of our lounge has been meticulously curated to provide an unmatched gaming experience.
-        </p>
+    <section className="py-24 md:py-32 px-4 md:px-8 lg:px-12 w-full relative border-t border-white/[0.02]">
+      {/* Section-specific Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-[-1]"
+        style={{
+          background: 'radial-gradient(circle at 0% 20%, rgba(163, 230, 53, 0.05) 0%, transparent 50%), radial-gradient(circle at 100% 80%, rgba(163, 230, 53, 0.04) 0%, transparent 50%)'
+        }}
+      />
+
+      <div className="max-w-[1500px] mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-12 relative z-10">
+        <div>
+          <h2 className="text-[2.1rem] sm:text-[3.2rem] lg:text-[4.2rem] font-semibold leading-[0.95] tracking-[-0.05em] text-white">
+            Designed for <br/>Excellence.
+          </h2>
+          <p className="mt-4 max-w-xl text-[14px] sm:text-[15px] leading-[1.8] text-white/50">
+            Every aspect curated for an unmatched competitive experience.
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="flex gap-5 overflow-x-auto pb-10 scrollbar-none snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:overflow-visible"
+      >
         {features.map((feature, index) => (
-          <div
+          <motion.div
             key={index}
-            className="feature-card glass-panel p-8 group relative overflow-hidden glass-panel-hover"
+            variants={cardVariants}
+            className="feature-card snap-center shrink-0 w-[280px] sm:w-[320px] lg:w-auto relative overflow-hidden rounded-[32px] border border-white/[0.08] bg-white/[0.03] backdrop-blur-2xl p-8 transition-all duration-500 hover:-translate-y-2 group"
           >
-            {/* Subtle glow effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 z-10 opacity-0 transition-all duration-700 group-hover:opacity-100" style={{ background: 'linear-gradient(180deg, rgba(163,230,53,0.14), transparent 35%)' }} />
             
-            <div className="relative z-10">
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-500 border border-white/5">
+            <div className="relative z-20 flex flex-col items-start h-full">
+              <div className="mb-8 w-14 h-14 flex items-center justify-center rounded-[20px] bg-black/30 border border-white/10 text-white group-hover:text-primary transition-colors duration-500">
                 <feature.icon className="w-6 h-6 stroke-[1.5]" />
               </div>
-              <h4 className="text-xl font-medium text-white mb-3">{feature.title}</h4>
-              <p className="text-secondary text-sm leading-relaxed">{feature.description}</p>
+              <h4 className="text-[1.2rem] font-semibold tracking-[-0.05em] text-white mb-3">{feature.title}</h4>
+              <p className="text-[13px] text-white/50 leading-relaxed font-sans">{feature.description}</p>
             </div>
-          </div>
+            
+            <div className="absolute inset-0 rounded-[32px] border border-white/10 pointer-events-none" />
+          </motion.div>
         ))}
+      </motion.div>
       </div>
     </section>
   );

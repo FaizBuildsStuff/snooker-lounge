@@ -18,6 +18,7 @@ export default function Gallery() {
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
       gsap.from(".gallery-item", {
         y: 100,
@@ -36,22 +37,33 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section ref={containerRef} id="gallery" className="py-32 px-4 md:px-8 lg:px-16 max-w-[1400px] mx-auto w-full">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+    <section ref={containerRef} id="gallery" className="py-24 md:py-32 w-full relative border-t border-white/[0.02]">
+      {/* Section-specific Background */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-[-1]"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.03) 0%, transparent 70%)'
+        }}
+      />
+
+      <div className="max-w-[1500px] mx-auto px-4 md:px-8 lg:px-12 mb-12 flex flex-col md:flex-row justify-between items-end gap-8">
         <div className="max-w-2xl">
-          <h3 className="text-primary tracking-[0.2em] uppercase text-sm mb-6">Visuals</h3>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white leading-[1.1]">
-            A Glimpse of Perfection
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 backdrop-blur-2xl">
+            <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_20px_rgba(163,230,53,1)]" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/70">GALLERY</span>
+          </div>
+          <h2 className="text-[2.2rem] font-semibold leading-[0.95] tracking-[-0.05em] sm:text-[3.5rem] lg:text-[4.6rem] text-white">
+            A Glimpse of Perfection.
           </h2>
         </div>
-        <button className="text-secondary hover:text-white transition-colors border-b border-secondary/30 hover:border-white pb-1">
+        <button className="text-white/60 hover:text-white transition-colors border-b border-white/30 hover:border-white pb-1 text-sm uppercase tracking-widest font-semibold">
           View Full Gallery
         </button>
       </div>
 
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="max-w-[1500px] mx-auto px-4 md:px-8 lg:px-12 columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
         {images.map((src, idx) => (
-          <div key={idx} className="gallery-item relative w-full overflow-hidden rounded-xl group break-inside-avoid">
+          <div key={idx} className="gallery-item relative w-full overflow-hidden rounded-[24px] border border-white/[0.08] group break-inside-avoid">
             <Image
               src={src}
               alt={`Gallery image ${idx + 1}`}

@@ -9,28 +9,26 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-border: var(--border);
-  --color-glass: var(--glass);
 }
 
 :root {
-  --background: #050505;
+  --background: #030303;
   --foreground: #ffffff;
-  --primary: #22c55e;
-  --secondary: #b3b3b3;
+  --primary: #a3e635; /* Matera Lime Green */
+  --secondary: #888888;
   --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.04);
 }
 
 .dark {
-  --background: #050505;
+  --background: #030303;
   --foreground: #ffffff;
-  --primary: #22c55e;
-  --secondary: #b3b3b3;
+  --primary: #a3e635;
+  --secondary: #888888;
   --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.04);
 }
 
 @layer base {
@@ -49,27 +47,26 @@
   .text-balance {
     text-wrap: balance;
   }
-  .glass-panel {
-    @apply bg-white/[0.02] backdrop-blur-md border border-white/[0.08] rounded-2xl;
+  .luxury-border {
+    @apply border border-white/10;
   }
-  .glass-panel-hover {
-    @apply hover:bg-white/[0.04] transition-colors duration-500;
+  .luxury-button {
+    @apply px-8 py-4 uppercase tracking-[0.2em] text-xs font-sans font-medium transition-all duration-700;
   }
 }
 
 /* Custom Scrollbar for a premium feel */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #c2a675;
 }
 
 html.lenis, html.lenis body {

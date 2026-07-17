@@ -1,4 +1,8 @@
 import SmoothScroll from "@/components/SmoothScroll";
+import Noise from "@/components/Noise";
+import Preloader from "@/components/Preloader";
+import CustomCursor from "@/components/CustomCursor";
+import GridBackground from "@/components/GridBackground";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Features from "@/components/Features";
@@ -14,7 +18,11 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="flex min-h-screen flex-col bg-background selection:bg-primary/30 selection:text-white">
+      <Preloader />
+      <CustomCursor />
+      <Noise />
+      <main className="flex min-h-screen flex-col selection:bg-primary/30 selection:text-white">
+        <GridBackground />
         <Hero />
         <About />
         <Features />
