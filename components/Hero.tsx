@@ -97,7 +97,7 @@ export default function Hero() {
         
         <div className="hero-reveal relative mb-10 mt-16">
           <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-black dark:text-white">
-            Multan's Most Premium <br className="hidden md:block"/>
+            Multan's Premium <br className="hidden md:block"/>
             <span className="relative mx-2 inline-block px-4 py-1 mt-2">
               {/* Figma-style Selection Box */}
               <div className="absolute inset-0 border-[1.5px] border-black/90 dark:border-primary bg-black/[0.02] dark:bg-primary/[0.05]">
@@ -106,7 +106,7 @@ export default function Hero() {
                 <div className="absolute -left-[4px] -bottom-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
                 <div className="absolute -right-[4px] -bottom-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
               </div>
-              Gaming Lounge
+              Snooker & Gaming
               {/* Floating Cursor/Label */}
               <div className="absolute -right-4 -bottom-6 md:-right-8 md:-bottom-8 z-10">
                 <div className="relative rounded-full bg-black dark:bg-primary px-3 py-[6px] text-[11px] font-black tracking-widest text-white dark:text-[#030303] shadow-xl shadow-black/20 dark:shadow-primary/20">
@@ -117,12 +117,12 @@ export default function Hero() {
                 </div>
               </div>
             </span>
-            <br className="hidden md:block"/> built for professionals.
+            <br className="hidden md:block"/> Lounge
           </h1>
         </div>
 
-        <p className="hero-reveal max-w-2xl text-[15px] md:text-[17px] leading-[1.8] text-black/60 dark:text-white/60 mb-12">
-          Experience gaming like never before. Heated slate snooker tables, RTX 4090 powered setups, and private rooms designed for the ultimate competitive edge.
+        <p className="hero-reveal max-w-2xl text-[18px] md:text-[22px] leading-[1.8] text-black/60 dark:text-white/60 mb-12 italic font-serif">
+          Where passion meets premium gaming.
         </p>
 
         <div className="hero-reveal mb-24">
