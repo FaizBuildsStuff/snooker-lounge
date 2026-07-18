@@ -46,7 +46,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-[95vh] flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
+    <section ref={containerRef} className="relative w-full flex flex-col items-center pt-[140px] md:pt-[180px] pb-32 overflow-hidden">
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes ticker {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+          animation: ticker 30s linear infinite;
+        }
+      `}} />
       
       {/* Navbar Overlay */}
       <header className="fixed left-1/2 top-4 z-[9999] w-[94%] max-w-[1280px] -translate-x-1/2 transition-all duration-500">
@@ -95,7 +104,7 @@ export default function Hero() {
       {/* Main Hero Content */}
       <div className="relative z-20 flex flex-col items-center text-center max-w-5xl px-6 w-full">
         
-        <div className="hero-reveal relative mb-10 mt-16">
+        <div className="hero-reveal relative mb-10">
           <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-black dark:text-white">
             Multan's Premium <br className="hidden md:block"/>
             <span className="relative mx-2 inline-block px-4 py-1 mt-2">
@@ -153,14 +162,21 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Matera Media Style Partner Banner at Bottom of Hero */}
-        <div className="hero-reveal mt-16 w-full max-w-5xl border-t border-black/10 dark:border-white/10 pt-12">
-          <h3 className="mb-8 text-[11px] font-bold tracking-[0.35em] text-black/30 dark:text-white/30 uppercase">Powered By</h3>
-          <div className="flex flex-wrap items-center justify-center gap-10 opacity-30 sm:gap-16 lg:gap-24 text-black dark:text-white">
-            <div className="text-[1.5rem] font-black italic tracking-tighter sm:text-[2rem] font-sans">NVIDIA</div>
-            <div className="text-[1.5rem] font-bold tracking-tighter sm:text-[2rem] font-sans">PlayStation</div>
-            <div className="text-[1.5rem] font-black tracking-tighter sm:text-[2rem] font-sans">RAZER</div>
-            <div className="text-[1.5rem] font-bold tracking-tighter sm:text-[2rem] font-sans">ALIENWARE</div>
+        {/* Endless Ticker Tape */}
+        <div className="absolute bottom-0 left-0 w-full py-4 overflow-hidden flex z-20">
+          <div className="flex whitespace-nowrap animate-ticker">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="flex items-center">
+                <span className="mx-8 text-[11px] font-bold tracking-[0.3em] text-black/60 dark:text-white/60 uppercase">Multan's Premier Gaming Destination</span>
+                <span className="text-primary text-[10px]">✦</span>
+                <span className="mx-8 text-[11px] font-bold tracking-[0.3em] text-black/60 dark:text-white/60 uppercase">Pro Snooker Tables</span>
+                <span className="text-primary text-[10px]">✦</span>
+                <span className="mx-8 text-[11px] font-bold tracking-[0.3em] text-black/60 dark:text-white/60 uppercase">Next-Gen Consoles</span>
+                <span className="text-primary text-[10px]">✦</span>
+                <span className="mx-8 text-[11px] font-bold tracking-[0.3em] text-black/60 dark:text-white/60 uppercase">VIP Experience</span>
+                <span className="text-primary text-[10px]">✦</span>
+              </div>
+            ))}
           </div>
         </div>
 
