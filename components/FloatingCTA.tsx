@@ -1,9 +1,17 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 export default function FloatingCTA() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleMenuState = (e: any) => setIsMenuOpen(e.detail);
+    window.addEventListener("mobileMenuState", handleMenuState);
+    return () => window.removeEventListener("mobileMenuState", handleMenuState);
+  }, []);
   const { scrollYProgress } = useScroll();
   
   // The doodle draws itself completely between 5% and 50% scroll
@@ -12,7 +20,7 @@ export default function FloatingCTA() {
   const opacity = useTransform(scrollYProgress, [0.02, 0.1], [0, 1]);
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[9000] flex flex-col items-end pointer-events-none">
+    <div className={`fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[9000] flex flex-col items-end pointer-events-none transition-all duration-500 ${isMenuOpen ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
       
       {/* Scroll Animated Doodle */}
       <motion.div 

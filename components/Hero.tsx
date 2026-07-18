@@ -105,28 +105,28 @@ export default function Hero() {
       <div className="relative z-20 flex flex-col items-center text-center max-w-5xl px-6 w-full">
         
         <div className="hero-reveal relative mb-10">
-          <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-black dark:text-white">
-            Multan's Premium <br className="hidden md:block"/>
-            <span className="relative mx-2 inline-block px-4 py-1 mt-2">
+          <h1 className="text-[2.3rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[1.15] md:leading-[1.05] tracking-tight text-black dark:text-white">
+            Multan's Premium <br />
+            <span className="relative mx-1 md:mx-2 inline-block px-3 md:px-4 py-1 md:py-2 mt-2 md:mt-4 mb-1 md:mb-2">
               {/* Figma-style Selection Box */}
               <div className="absolute inset-0 border-[1.5px] border-black/90 dark:border-primary bg-black/[0.02] dark:bg-primary/[0.05]">
-                <div className="absolute -left-[4px] -top-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
-                <div className="absolute -right-[4px] -top-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
-                <div className="absolute -left-[4px] -bottom-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
-                <div className="absolute -right-[4px] -bottom-[4px] h-[8px] w-[8px] bg-black dark:bg-primary" />
+                <div className="absolute -left-[4px] -top-[4px] h-[6px] w-[6px] md:h-[8px] md:w-[8px] bg-black dark:bg-primary" />
+                <div className="absolute -right-[4px] -top-[4px] h-[6px] w-[6px] md:h-[8px] md:w-[8px] bg-black dark:bg-primary" />
+                <div className="absolute -left-[4px] -bottom-[4px] h-[6px] w-[6px] md:h-[8px] md:w-[8px] bg-black dark:bg-primary" />
+                <div className="absolute -right-[4px] -bottom-[4px] h-[6px] w-[6px] md:h-[8px] md:w-[8px] bg-black dark:bg-primary" />
               </div>
               Snooker & Gaming
               {/* Floating Cursor/Label */}
-              <div className="absolute -right-4 -bottom-6 md:-right-8 md:-bottom-8 z-10">
-                <div className="relative rounded-full bg-black dark:bg-primary px-3 py-[6px] text-[11px] font-black tracking-widest text-white dark:text-[#030303] shadow-xl shadow-black/20 dark:shadow-primary/20">
+              <div className="absolute -right-2 -bottom-5 md:-right-8 md:-bottom-8 z-10">
+                <div className="relative rounded-full bg-black dark:bg-primary px-2 py-1 md:px-3 md:py-[6px] text-[9px] md:text-[11px] font-black tracking-widest text-white dark:text-[#030303] shadow-xl shadow-black/20 dark:shadow-primary/20">
                   VIP
-                  <div className="absolute -left-5 -top-5 rotate-[-15deg]">
-                    <MousePointer2 className="h-6 w-6 fill-black dark:fill-primary text-white dark:text-[#030303] stroke-[1.5px] drop-shadow-md" />
+                  <div className="absolute -left-4 -top-4 md:-left-5 md:-top-5 rotate-[-15deg]">
+                    <MousePointer2 className="h-5 w-5 md:h-6 md:w-6 fill-black dark:fill-primary text-white dark:text-[#030303] stroke-[1.5px] drop-shadow-md" />
                   </div>
                 </div>
               </div>
             </span>
-            <br className="hidden md:block"/> Lounge
+            <br /> Lounge
           </h1>
         </div>
 

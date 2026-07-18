@@ -36,15 +36,15 @@ export default function CTA() {
         
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-black/[0.08] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.02] px-4 py-2 backdrop-blur-2xl">
           <div className="h-2 w-2 rounded-full bg-black dark:bg-primary shadow-sm" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60 dark:text-white/60">JOIN THE ELITE</span>
+          <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60 dark:text-white/60">BOOK YOUR VISIT</span>
         </div>
 
         <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] font-semibold tracking-[-0.05em] text-black dark:text-white mb-6 leading-[1.05]">
-          Ready to Experience <br />
-          <span className="text-black dark:text-primary/90 italic">Multan's Finest?</span>
+          Ready to play? <br />
+          <span className="text-black dark:text-primary/90 italic">Visit us today.</span>
         </h2>
         <p className="text-[15px] text-black/60 dark:text-white/60 mb-12 max-w-xl mx-auto leading-[1.8] font-sans">
-          Reserve your table or VIP room in advance to guarantee your spot at the premium snooker and gaming lounge.
+          Whether you want a casual game with friends or a private VIP room for serious snooker, grab your table before it's gone.
         </p>
         
         <div className="flex justify-center">

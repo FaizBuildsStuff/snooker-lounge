@@ -41,7 +41,7 @@ export default function IntroAndFeatures() {
   }, []);
 
   return (
-    <section ref={containerRef} id="features" className="pt-8 pb-24 md:pt-12 md:pb-32 w-full relative">
+    <section ref={containerRef} id="features" className="pt-8 pb-24 md:pt-12 md:pb-32 w-full relative overflow-hidden">
       {/* Background gradients */}
       <div 
         className="absolute inset-0 pointer-events-none z-[-1] hidden dark:block"
