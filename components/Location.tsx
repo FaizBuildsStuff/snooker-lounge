@@ -52,8 +52,8 @@ export default function Location() {
               <div>
                 <div className="text-black dark:text-white font-medium mb-1">Address</div>
                 <div className="text-black/60 dark:text-white/60 leading-relaxed font-sans">
-                  Gulgasht Colony,<br />
-                  Multan, Pakistan
+                  Shahrukney Alam Colony Thana Chowk, <br />
+                  A Block, Multan, Pakistan, 60000
                 </div>
               </div>
             </div>
@@ -74,15 +74,22 @@ export default function Location() {
               <div>
                 <div className="text-black dark:text-white font-medium mb-1">Contact / WhatsApp</div>
                 <div className="text-black/60 dark:text-white/60 leading-relaxed font-sans">
-                  +92 300 0000000
+                  <a href="https://wa.me/923170657192" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-primary transition-colors">
+                    0317 0657192
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           
-          <button className="w-full mt-10 bg-black dark:bg-primary text-white dark:text-[#030303] py-4 font-semibold rounded-full hover:bg-gray-900 dark:hover:bg-[#a3e635] brightness-100 dark:hover:brightness-110 transition-colors duration-300 shadow-md">
+          <a 
+            href="https://maps.google.com/?q=Shahrukney+Alam+Colony+Thana+Chowk,+A+Block,+Multan,+Pakistan,+60000" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full mt-10 bg-black dark:bg-primary text-white dark:text-[#030303] py-4 font-semibold rounded-full hover:bg-gray-900 dark:hover:bg-[#a3e635] brightness-100 dark:hover:brightness-110 transition-colors duration-300 shadow-md flex items-center justify-center text-center"
+          >
             Get Directions
-          </button>
+          </a>
         </div>
       </div>
     </section>

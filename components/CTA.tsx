@@ -48,7 +48,12 @@ export default function CTA() {
         </p>
         
         <div className="flex justify-center">
-          <button className="group flex items-center overflow-hidden rounded-full bg-black dark:bg-primary shadow-md transition-all duration-300 hover:scale-[1.04]">
+          <a 
+            href="https://wa.me/923170657192" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group flex items-center overflow-hidden rounded-full bg-black dark:bg-primary shadow-md transition-all duration-300 hover:scale-[1.04]"
+          >
             <span className="px-8 py-4 text-[13px] font-semibold tracking-[-0.01em] text-white dark:text-[#030303] uppercase">Book Your Table Today</span>
             <div className="flex h-[54px] w-[54px] items-center justify-center bg-gray-900 dark:bg-[#a3e635] brightness-100 dark:brightness-110 transition-all duration-300 group-hover:bg-gray-800 dark:group-hover:brightness-125">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right h-5 w-5 text-white dark:text-[#030303]">
@@ -56,7 +61,7 @@ export default function CTA() {
                 <path d="M7 17 17 7"></path>
               </svg>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </section>

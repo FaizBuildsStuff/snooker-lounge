@@ -5,6 +5,7 @@ import CustomCursor from "@/components/CustomCursor";
 import GridBackground from "@/components/GridBackground";
 import Hero from "@/components/Hero";
 import IntroAndFeatures from "@/components/IntroAndFeatures";
+import TournamentVideo from "@/components/TournamentVideo";
 import Location from "@/components/Location";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <GridBackground />
         <Hero />
         <IntroAndFeatures />
+        <TournamentVideo />
         <Location />
         <CTA />
         <Footer />

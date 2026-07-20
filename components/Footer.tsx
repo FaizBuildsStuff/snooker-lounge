@@ -7,9 +7,7 @@ export default function Footer() {
         </div>
         
         <div className="flex gap-8 text-sm text-black/60 dark:text-white/60">
-          <a href="#" className="hover:text-black dark:hover:text-primary transition-colors">Instagram</a>
-          <a href="#" className="hover:text-black dark:hover:text-primary transition-colors">Facebook</a>
-          <a href="#" className="hover:text-black dark:hover:text-primary transition-colors">Twitter</a>
+          <a href="https://www.facebook.com/profile.php?id=61571754714172" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-primary transition-colors">Facebook</a>
         </div>
         
         <div className="text-sm text-black/40 dark:text-white/40">
