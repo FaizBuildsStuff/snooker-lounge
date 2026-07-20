@@ -74,8 +74,8 @@ export default function Location() {
               <div>
                 <div className="text-black dark:text-white font-medium mb-1">Contact / WhatsApp</div>
                 <div className="text-black/60 dark:text-white/60 leading-relaxed font-sans">
-                  <a href="https://wa.me/923170657192" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-primary transition-colors">
-                    0317 0657192
+                  <a href="https://wa.me/923146217172" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-primary transition-colors">
+                    0314 6217172
                   </a>
                 </div>
               </div>

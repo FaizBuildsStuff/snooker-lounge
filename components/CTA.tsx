@@ -49,7 +49,7 @@ export default function CTA() {
         
         <div className="flex justify-center">
           <a 
-            href="https://wa.me/923170657192" 
+            href="https://wa.me/923146217172" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="group flex items-center overflow-hidden rounded-full bg-black dark:bg-primary shadow-md transition-all duration-300 hover:scale-[1.04]"
