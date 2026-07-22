@@ -148,7 +148,7 @@ export default function IntroAndFeatures() {
           {/* Card 4: VIP Room (Large) */}
           <div className="bento-card relative overflow-hidden rounded-[32px] md:col-span-7 group bg-black">
             <Image
-              src="/3.jpeg"
+              src="/privatelounge.jpeg"
               alt="Exclusive Private VIP Room"
               fill
               className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"

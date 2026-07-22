@@ -70,7 +70,7 @@ export default function Hero() {
                 <span className="text-black dark:text-white font-bold text-lg relative z-10">S.</span>
               </div>
               <div className="hidden sm:block">
-                <h3 className="text-[15px] font-semibold tracking-[-0.04em] text-black dark:text-white">Snooker Lounge</h3>
+                <h3 className="text-[15px] font-semibold tracking-[-0.04em] text-black dark:text-white">Diamond Snooker Lounge</h3>
                 <p className="text-[11px] text-black/50 dark:text-white/50">Premium Gaming</p>
               </div>
             </Link>
@@ -134,17 +134,10 @@ export default function Hero() {
           Where passion meets premium gaming.
         </p>
 
-        <div className="hero-reveal mb-24">
-          <button className="group flex items-center overflow-hidden rounded-full bg-white dark:bg-primary border border-black/10 dark:border-primary/20 shadow-sm transition-all duration-300 hover:scale-[1.04] hover:shadow-md">
-            <span className="px-8 py-4 text-[13px] font-semibold tracking-[-0.01em] text-black dark:text-[#030303] uppercase">Book Now</span>
-            <div className="flex h-[54px] w-[54px] items-center justify-center bg-black dark:bg-[#a3e635] brightness-90 dark:brightness-110 transition-all duration-300 group-hover:bg-gray-900 dark:group-hover:bg-white">
-              <ArrowUpRight className="h-5 w-5 text-white dark:text-[#030303] stroke-[3px]" />
-            </div>
-          </button>
-        </div>
+
 
         {/* Floating Background Tags */}
-        <div className="floating-tag-1 absolute left-[5%] lg:left-[10%] top-[30%] lg:top-[35%] hidden md:block">
+        <div className="floating-tag-1 absolute left-[2%] lg:left-[5%] bottom-[45%] lg:bottom-[40%] hidden md:block">
           <div className="relative rounded-full bg-white dark:bg-[#030303] border border-black/10 dark:border-white/10 px-6 py-3 text-[14px] font-bold text-black dark:text-white shadow-lg shadow-black/5">
             Esports PCs
             <div className="absolute right-[-18px] top-[-18px] rotate-[15deg]">
@@ -153,7 +146,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="floating-tag-2 absolute right-[5%] lg:right-[10%] bottom-[30%] lg:bottom-[40%] hidden md:block">
+        <div className="floating-tag-2 absolute right-[2%] lg:right-[5%] bottom-[25%] lg:bottom-[20%] hidden md:block">
           <div className="relative rounded-full bg-white dark:bg-[#030303] border border-black/10 dark:border-white/10 px-6 py-3 text-[14px] font-bold text-black dark:text-white shadow-lg shadow-black/5">
             Heated Slate Tables
             <div className="absolute left-[-18px] top-[-18px] rotate-[-15deg]">

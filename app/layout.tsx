@@ -20,8 +20,38 @@ const playfair = Playfair_Display({
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Premium Snooker Lounge",
-  description: "The ultimate snooker and gaming experience.",
+  title: {
+    default: "Diamond Snooker Lounge | Premium Gaming & Snooker in Multan",
+    template: "%s | Diamond Snooker Lounge"
+  },
+  description: "Experience Multan's premier hangout destination for gamers and cueists. Diamond Snooker Lounge offers world-class heated slate tables, next-gen PS5 gaming, and exclusive 24/7 VIP private rooms.",
+  keywords: ["Snooker", "Diamond Snooker Lounge", "Snooker Club Multan", "PS5 Gaming", "VIP Lounge", "Billiards", "Pool Tables Multan", "Gaming Zone", "Shah Rukn E Alam"],
+  authors: [{ name: "Diamond Snooker Lounge" }],
+  creator: "Diamond Snooker Lounge",
+  openGraph: {
+    type: "website",
+    locale: "en_PK",
+    url: "https://diamondsnookerlounge.com",
+    title: "Diamond Snooker Lounge | Premium Gaming in Multan",
+    description: "Experience Multan's premier hangout destination for gamers and cueists. Diamond Snooker Lounge offers world-class heated slate tables, next-gen PS5 gaming, and exclusive 24/7 VIP private rooms.",
+    siteName: "Diamond Snooker Lounge",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Diamond Snooker Lounge | Premium Gaming in Multan",
+    description: "Experience Multan's premier hangout destination for gamers and cueists.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

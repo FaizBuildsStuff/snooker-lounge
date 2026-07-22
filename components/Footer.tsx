@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
         
         <div className="text-sm text-black/40 dark:text-white/40">
-          © {new Date().getFullYear()} Snooker Lounge. All rights reserved.
+          © {new Date().getFullYear()} Diamond Snooker Lounge. All rights reserved.
         </div>
       </div>
     </footer>

@@ -64,12 +64,12 @@ export default function VIPExperience() {
 
       <div className="relative z-10 px-4 md:px-12 lg:px-20 max-w-[1600px] mx-auto">
         <div className="mb-14 text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-4 py-2 backdrop-blur-2xl">
-            <div className="h-2 w-2 rounded-full bg-black shadow-[0_0_20px_rgba(0,0,0,0.1)]" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-black/60">EXCLUSIVE ACCESS</span>
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-gradient-to-r from-[#D4AF37]/5 to-transparent px-4 py-2 backdrop-blur-2xl">
+            <div className="h-2 w-2 rounded-full bg-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.6)]" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#D4AF37]">EXCLUSIVE ACCESS</span>
           </div>
           <h2 className="mx-auto max-w-4xl text-[2.2rem] font-semibold leading-[0.95] tracking-[-0.05em] sm:text-[3.5rem] lg:text-[4.6rem] text-black">
-            Private VIP<br/>Lounges.
+            The Private<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#997a15]">Lounge Experience.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14px] leading-[1.8] text-black/60 sm:text-[15px]">
             Elevate your experience in our private VIP rooms. Perfect for private parties, high-stakes games, or those who simply prefer uninterrupted focus.
@@ -81,16 +81,16 @@ export default function VIPExperience() {
           <div ref={imageRef} className="relative overflow-hidden rounded-[30px] lg:rounded-[42px] border border-black/[0.08] bg-white shadow-sm aspect-[4/3] lg:aspect-auto">
             <div className="absolute inset-0 bg-black/5 mix-blend-overlay z-10 pointer-events-none" />
             <Image
-              src="/images/vip.jpg"
-              alt="VIP Snooker Room"
+              src="/privatelounge.jpeg"
+              alt="Private VIP Lounge"
               fill
               className="object-cover vip-parallax transition-all duration-700 hover:scale-[1.05]"
             />
           </div>
 
           {/* Text/Features Panel */}
-          <div ref={textRef} className="relative overflow-hidden rounded-[30px] lg:rounded-[42px] border border-black/[0.08] bg-white p-6 sm:p-10 backdrop-blur-3xl shadow-sm">
-            <div className="absolute right-[-10%] top-[-10%] h-[320px] w-[320px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(0,0,0,0.03), transparent 72%)', filter: 'blur(90px)' }} />
+          <div ref={textRef} className="relative overflow-hidden rounded-[30px] lg:rounded-[42px] border border-[#D4AF37]/20 bg-white p-6 sm:p-10 backdrop-blur-3xl shadow-[0_8px_40px_rgba(212,175,55,0.08)]">
+            <div className="absolute right-[-10%] top-[-10%] h-[320px] w-[320px] rounded-full" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.08), transparent 72%)', filter: 'blur(90px)' }} />
             
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -111,8 +111,9 @@ export default function VIPExperience() {
               </div>
 
               <div className="mt-8">
-                <button className="group flex items-center overflow-hidden rounded-full bg-black shadow-md transition-all duration-300 hover:scale-[1.04]">
-                  <span className="px-7 py-3 text-[13px] font-semibold tracking-[-0.01em] text-white uppercase">Reserve VIP Room</span>
+                <button className="group relative flex items-center justify-center overflow-hidden rounded-full bg-black shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(212,175,55,0.2)] border border-transparent hover:border-[#D4AF37]/40 w-max">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
+                  <span className="relative z-10 px-8 py-4 text-[13px] font-semibold tracking-[0.05em] text-[#D4AF37] uppercase">Reserve Private Lounge</span>
                 </button>
               </div>
             </div>

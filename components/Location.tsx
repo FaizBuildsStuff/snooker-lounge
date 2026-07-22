@@ -30,7 +30,7 @@ export default function Location() {
     <section ref={containerRef} className="py-32 w-full relative">
       <div className="absolute inset-0 z-0 opacity-100 transition-all duration-1000">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110292.00844783307!2d71.38555198083812!3d30.181340156942007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b314d1017e2e7%3A0x6b823e20e89c67bc!2sMultan%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+          src="https://maps.google.com/maps?q=559/D+Shah+Rukn+E+Alam+St,+D+Block+Block+D+Shah+Rukn+E+Alam+Housing+Scheme,+Multan,+Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -52,8 +52,9 @@ export default function Location() {
               <div>
                 <div className="text-black dark:text-white font-medium mb-1">Address</div>
                 <div className="text-black/60 dark:text-white/60 leading-relaxed font-sans">
-                  Shahrukney Alam Colony Thana Chowk, <br />
-                  A Block, Multan, Pakistan, 60000
+                  559/D Shah Rukn E Alam St, D Block <br />
+                  Block D Shah Rukn E Alam Housing Scheme, <br />
+                  Multan, Pakistan
                 </div>
               </div>
             </div>
@@ -63,8 +64,7 @@ export default function Location() {
               <div>
                 <div className="text-black dark:text-white font-medium mb-1">Opening Hours</div>
                 <div className="text-black/60 dark:text-white/60 leading-relaxed font-sans">
-                  Monday - Sunday<br />
-                  11:00 AM - 3:00 AM
+                  Open 24/7
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Location() {
           </div>
           
           <a 
-            href="https://maps.google.com/?q=Shahrukney+Alam+Colony+Thana+Chowk,+A+Block,+Multan,+Pakistan,+60000" 
+            href="https://maps.google.com/?q=559/D+Shah+Rukn+E+Alam+St,+D+Block+Block+D+Shah+Rukn+E+Alam+Housing+Scheme,+Multan,+Pakistan" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-full mt-10 bg-black dark:bg-primary text-white dark:text-[#030303] py-4 font-semibold rounded-full hover:bg-gray-900 dark:hover:bg-[#a3e635] brightness-100 dark:hover:brightness-110 transition-colors duration-300 shadow-md flex items-center justify-center text-center"
