@@ -71,9 +71,11 @@ export default function Hero() {
       
       {/* Navbar Overlay */}
       <header className="fixed left-1/2 top-4 z-[9999] w-[94%] max-w-[1280px] -translate-x-1/2 transition-all duration-500">
-        <div className="relative overflow-hidden rounded-full border border-black/[0.06] dark:border-white/[0.06] bg-white/60 dark:bg-[#030303]/60 backdrop-blur-xl shadow-sm">
-          <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top, rgba(163,230,53,0.02), transparent 72%)' }} />
-          <div className="absolute left-1/2 top-[-120px] h-[220px] w-[220px] -translate-x-1/2 rounded-full" style={{ background: 'radial-gradient(circle, rgba(163,230,53,0.04), transparent 72%)', filter: 'blur(50px)' }} />
+        <div className="relative rounded-full border border-black/[0.06] dark:border-white/[0.06] bg-white/60 dark:bg-[#030303]/60 backdrop-blur-xl shadow-sm">
+          <div className="absolute inset-0 overflow-hidden rounded-full pointer-events-none">
+            <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top, rgba(163,230,53,0.02), transparent 72%)' }} />
+            <div className="absolute left-1/2 top-[-120px] h-[220px] w-[220px] -translate-x-1/2 rounded-full" style={{ background: 'radial-gradient(circle, rgba(163,230,53,0.04), transparent 72%)', filter: 'blur(50px)' }} />
+          </div>
           
           <div className="relative z-20 flex h-[68px] items-center justify-between px-4 sm:px-6">
             <Link href="/" className="group flex items-center gap-3">
