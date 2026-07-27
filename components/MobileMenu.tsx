@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +43,12 @@ export default function MobileMenu() {
             isOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-full"
           }`}
         >
+          <div className="mb-10 flex flex-col items-center gap-3">
+            <div className="relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] shadow-xl">
+              <Image src="/logo.jpg" alt="Diamond Snooker Club" fill className="object-cover" />
+            </div>
+            <span className="text-sm font-semibold tracking-wider uppercase text-black/80 dark:text-white/80">Diamond Snooker Club</span>
+          </div>
           <div className="flex flex-col gap-8 text-center text-3xl font-semibold tracking-tight">
             <a href="#home" onClick={() => setIsOpen(false)} className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors">Home</a>
             <a href="#features" onClick={() => setIsOpen(false)} className="text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors">The Experience</a>

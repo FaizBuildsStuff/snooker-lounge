@@ -79,9 +79,8 @@ export default function Hero() {
           
           <div className="relative z-20 flex h-[68px] items-center justify-between px-4 sm:px-6">
             <Link href="/" className="group flex items-center gap-3">
-              <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02]">
-                <div className="absolute inset-0" style={{ background: 'radial-gradient(circle, rgba(163,230,53,0.04), transparent 72%)' }} />
-                <span className="text-black dark:text-white font-bold text-lg relative z-10">S.</span>
+              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02]">
+                <Image src="/logo.jpg" alt="Diamond Snooker Club" fill className="object-cover" />
               </div>
               <div className="hidden sm:block">
                 <h3 className="text-[15px] font-semibold tracking-[-0.04em] text-black dark:text-white">Diamond Snooker Lounge</h3>

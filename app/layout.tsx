@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   keywords: ["Snooker", "Diamond Snooker Lounge", "Snooker Club Multan", "PS5 Gaming", "VIP Lounge", "Billiards", "Pool Tables Multan", "Gaming Zone", "Shah Rukn E Alam"],
   authors: [{ name: "Diamond Snooker Lounge" }],
   creator: "Diamond Snooker Lounge",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
   openGraph: {
     type: "website",
     locale: "en_PK",

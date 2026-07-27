@@ -30,7 +30,7 @@ export default function Location() {
     <section ref={containerRef} className="py-32 w-full relative">
       <div className="absolute inset-0 z-0 opacity-100 transition-all duration-1000">
         <iframe
-          src="https://maps.google.com/maps?q=559/D+Shah+Rukn+E+Alam+St,+D+Block+Block+D+Shah+Rukn+E+Alam+Housing+Scheme,+Multan,+Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=30.194150924682617,71.51093292236328+(Diamonds+Snooker+Club)&t=&z=17&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -83,7 +83,7 @@ export default function Location() {
           </div>
           
           <a 
-            href="https://maps.google.com/?q=559/D+Shah+Rukn+E+Alam+St,+D+Block+Block+D+Shah+Rukn+E+Alam+Housing+Scheme,+Multan,+Pakistan" 
+            href="https://www.google.com/maps/search/Diamonds%20Snooker%20Club/@30.194150924682617,71.51093292236328,17z?hl=en" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-full mt-10 bg-black dark:bg-primary text-white dark:text-[#030303] py-4 font-semibold rounded-full hover:bg-gray-900 dark:hover:bg-[#a3e635] brightness-100 dark:hover:brightness-110 transition-colors duration-300 shadow-md flex items-center justify-center text-center"
